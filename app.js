@@ -1,11 +1,7 @@
-import { db, storage } from './firebase-config.js';
-
 // Глобальные переменные
 let products = [];
 let cart = [];
-let isAdmin = false;
 let isLoading = false;
-const ADMIN_PASSWORD = '56541597';  // Правильный пароль администратора
 
 // Инициализация Telegram WebApp
 const tg = window.Telegram.WebApp;
@@ -13,8 +9,7 @@ tg.expand();
 
 // Загрузка продуктов при запуске
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Страница загружена, API URL:', config.API_URL);
-    hideLoader();
+    console.log('Страница загружена');
     loadProducts();
     setupEventListeners();
     
