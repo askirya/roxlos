@@ -3,32 +3,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tropov - Изделия из кожи</title>
+    <title>Tropov - Изделия из кожи ручной работы</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <script src="https://telegram.org/js/telegram-web-app.js"></script>
 </head>
 <body>
+    <div id="loader" class="loader"></div>
+    
     <header>
-        <h1>Tropov</h1>
-        <div class="search-filter">
-            <input type="text" id="searchInput" placeholder="Поиск...">
-            <select id="filterSelect">
-                <option value="all">Все категории</option>
-                <option value="wallets">Кошельки</option>
-                <option value="bags">Сумки</option>
-                <option value="belts">Ремни</option>
-            </select>
-        </div>
+        <nav>
+            <div class="logo">
+                <h1>Tropov</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="nav-link active">Товары</a>
+                <a href="contacts.html" class="nav-link">Контакты</a>
+                <a href="donate.html" class="nav-link">Донат</a>
+            </div>
+        </nav>
     </header>
 
-    <main>
-        <div id="productsContainer" class="products-container">
-            <!-- Продукты будут добавлены через JavaScript -->
-        </div>
+    <main class="container">
+        <section id="products" class="section">
+            <div class="search-filter">
+                <input type="text" id="searchInput" placeholder="Поиск товаров...">
+                <select id="filterSelect">
+                    <option value="all">Все категории</option>
+                    <option value="wallets">Кошельки</option>
+                    <option value="bags">Сумки</option>
+                    <option value="accessories">Аксессуары</option>
+                </select>
+            </div>
+            <div id="productsContainer" class="products-container"></div>
+        </section>
+
+        <section id="admin" class="admin-panel">
+            <h2>Административная панель</h2>
+            <div class="admin-controls">
+                <button id="addProductBtn">Добавить товар</button>
+                <button id="exportProductsBtn">Экспорт товаров</button>
+            </div>
+            
+            <form id="productForm" style="display: none;">
+                <input type="text" id="productName" name="productName" placeholder="Название товара" required>
+                <textarea id="productDescription" name="productDescription" placeholder="Описание товара" required></textarea>
+                <select id="productCategory" name="productCategory" required>
+                    <option value="">Выберите категорию</option>
+                    <option value="wallets">Кошельки</option>
+                    <option value="bags">Сумки</option>
+                    <option value="accessories">Аксессуары</option>
+                </select>
+                <input type="number" id="productPrice" name="productPrice" placeholder="Цена" required>
+                <div class="image-selection">
+                    <select id="existingImages" name="existingImages">
+                        <option value="">Выберите изображение из галереи</option>
+                    </select>
+                    <div class="separator">ИЛИ</div>
+                    <input type="file" id="productImage" name="productImage" accept="image/*">
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">Сохранить</button>
+                    <button type="button" id="cancelProductBtn">Отмена</button>
+                </div>
+            </form>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2024 Tropov. Все права защищены.</p>
+        <div class="footer-content">
+            <p>&copy; 2025 Tropov. Все права защищены</p>
+            <button id="adminLoginBtn" class="admin-login-btn">Войти в админ-панель</button>
+        </div>
     </footer>
 
     <script src="app.js"></script>

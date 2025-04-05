@@ -1,26 +1,10 @@
 [
   {
     "id": 1,
-    "name": "Кожаный кошелек Classic",
-    "description": "Классический кошелек из натуральной кожи с отделениями для карт и купюр",
+    "name": "Кожаный кошелек",
+    "description": "Классический кошелек ручной работы",
     "category": "wallets",
     "price": 3500,
-    "image": "images/wallet1.jpg"
-  },
-  {
-    "id": 2,
-    "name": "Сумка Messenger",
-    "description": "Стильная сумка через плечо из премиальной кожи с регулируемым ремнем",
-    "category": "bags",
-    "price": 12000,
-    "image": "images/wallet1.jpg"
-  },
-  {
-    "id": 3,
-    "name": "Ремень Classic Brown",
-    "description": "Классический кожаный ремень коричневого цвета с металлической пряжкой",
-    "category": "belts",
-    "price": 2500,
-    "image": "images/wallet1.jpg"
+    "image": "images/placeholder.jpg"
   }
 ]
