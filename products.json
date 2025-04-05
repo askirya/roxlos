@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Кожаный кошелек",
+    "description": "Классический кошелек ручной работы из натуральной кожи",
+    "category": "wallets",
+    "price": 3500,
+    "image": "images/1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Кожаная сумка",
+    "description": "Стильная сумка из натуральной кожи с регулируемым ремешком",
+    "category": "bags",
+    "price": 12000,
+    "image": "images/1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Ремень",
+    "description": "Классический ремень из натуральной кожи с пряжкой",
+    "category": "belts",
+    "price": 2500,
+    "image": "images/1.jpg"
+  }
+]
